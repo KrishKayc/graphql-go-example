@@ -85,6 +85,17 @@ func TestResolveCreateUserInvalidPhone(t *testing.T) {
 	}
 }
 
+func TestCreateUserArgs(t *testing.T) {
+	db, mock, cache := mock(t)
+	fmt.Println(mock)
+	defer db.Close()
+	defer cache.Close()
+
+	f := fields.CreateUser(db)
+	if len(f.Args) != 3 {
+		t.Error("create user args modified")
+	}
+}
 func mock(t *testing.T) (*sql.DB, sqlmock.Sqlmock, *redis.Client) {
 	db, mock, err := sqlmock.New()
 	handleErr(err, t)

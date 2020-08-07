@@ -21,7 +21,7 @@ var cab = graphql.NewObject(graphql.ObjectConfig{
 //SetLocation request booking
 func SetLocation(db *sql.DB, cache *redis.Client) *graphql.Field {
 	return &graphql.Field{
-		Type: booking,
+		Type: cab,
 		Args: graphql.FieldConfigArgument{
 			"cabId":      &graphql.ArgumentConfig{Type: graphql.NewNonNull(graphql.Int)},
 			"locationId": &graphql.ArgumentConfig{Type: graphql.NewNonNull(graphql.Int)},

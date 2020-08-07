@@ -37,3 +37,16 @@ func TestResolveCabLocationWithoutCabId(t *testing.T) {
 		t.Error("Error not thrown for required args")
 	}
 }
+
+func TestResolveCabLocationArgs(t *testing.T) {
+	db, mock, cache := mock(t)
+	fmt.Println(mock)
+	defer db.Close()
+	defer cache.Close()
+
+	c := fields.SetLocation(db, cache)
+
+	if len(c.Args) != 2 {
+		t.Error("set cab location args modified")
+	}
+}

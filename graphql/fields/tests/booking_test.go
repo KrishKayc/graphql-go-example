@@ -49,3 +49,31 @@ func TestBookCabWithoutUser(t *testing.T) {
 		t.Error("Error not thrown for required args")
 	}
 }
+
+func TestBookCabField(t *testing.T) {
+	db, mock, cache := mock(t)
+	fmt.Println(mock)
+	defer db.Close()
+	defer cache.Close()
+
+	b := fields.BookCab(db, cache)
+	if b.Type.Name() != "booking" {
+		t.Error("Wrong type for booking field")
+	}
+}
+
+func TestBookCabArgs(t *testing.T) {
+	db, mock, cache := mock(t)
+	fmt.Println(mock)
+	defer db.Close()
+	defer cache.Close()
+
+	b := fields.BookCab(db, cache)
+
+	if len(b.Args) != 3 {
+		t.Error("arguments modified for booking cabs")
+	}
+	if b.Args["userId"] == nil || b.Args["pickUpLocId"] == nil || b.Args["dropLocId"] == nil {
+		t.Error("argument names modified for booking cabs")
+	}
+}
