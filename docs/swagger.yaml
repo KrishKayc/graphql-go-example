@@ -1,0 +1,17 @@
+basePath: /api/v1
+host: localhost:3000
+info:
+  contact: {}
+  description: Server to book cabs.
+  license: {}
+  title: Book Cab API
+  version: "1.0"
+paths:
+  /graphql:
+    post:
+      description: Open 'GraphiQL' tool and type localhost:3000/graphql
+      summary: The GraphQL end point of the app
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"

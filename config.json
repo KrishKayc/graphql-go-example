@@ -1,0 +1,7 @@
+{
+    "sqlDataSource" : "root:Krish@11081990@/BookCab?parseTime=true",
+    "redisOptions" : {
+        "address" : "",
+        "password" : ""
+    }
+}
