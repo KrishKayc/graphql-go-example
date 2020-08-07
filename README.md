@@ -5,7 +5,8 @@
   Execute the following sql scripts in **mysql shell**
    ```  
       source db/install.sql 
-      source db/dump.sql ```
+      source db/dump.sql 
+   ```
 
 ## Running the app
 ```
