@@ -2,7 +2,10 @@
   Sample app which depicts a Cab Booking platform. The app supports graphQL queries to book a nearby cab and view booking history for a user.
 
 ## Setup sample Data
-   ``` Run db/install.sql db/dump.sql ```
+  Execute the following sql scripts in **mysql shell**
+   ```  
+      source db/install.sql 
+      source db/dump.sql ```
 
 ## Running the app
 ```
