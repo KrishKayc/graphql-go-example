@@ -1,5 +1,5 @@
 {
-    "sqlDataSource" : "root:Krish@11081990@/BookCab?parseTime=true",
+    "sqlDataSource" : "root:root@/BookCab?parseTime=true",
     "redisOptions" : {
         "address" : "",
         "password" : ""
